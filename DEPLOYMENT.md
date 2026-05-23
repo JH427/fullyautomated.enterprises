@@ -9,6 +9,6 @@ Current status: deployment is working via SSH/rsync. Detailed connection values 
 - Build: `npm ci && npm run build`
 - Output: `dist/`
 - Deploy method: rsync over SSH using a dedicated local deploy key
-- Full runbook: kept in `~/deploy-docs/deployment-namecheap.md` (or similar private location)
+- Full runbook: kept outside this public repository in a private local location
 
 Do not commit hosting credentials, private keys, or host-specific paths to this repository.

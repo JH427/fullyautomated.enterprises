@@ -89,5 +89,5 @@ Never commit:
 
 ## Deployment posture
 
-Hosting is Namecheap shared hosting. Preferred future deployment path is SSH/SFTP/rsync using a locally generated deploy key whose public key is imported into cPanel. Deployment automation is not yet configured; do not invent credentials or deploy paths.
+Hosting is Namecheap shared hosting. Manual SSH/rsync deployment is operational, but host-specific connection details and document roots must stay outside this public repository. Do not invent credentials or deploy paths; consult Joshua or the private local runbook when deployment is explicitly requested.
 
