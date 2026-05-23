@@ -1,0 +1,46 @@
+---
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="border-t border-light-border dark:border-dark-border mt-24">
+	<div class="max-w-content mx-auto px-6 py-12">
+		<div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+			<div>
+				<h3 class="text-lg font-medium mb-4">Fully Automated Enterprises</h3>
+				<p class="text-sm text-light-text-secondary dark:text-dark-text-secondary leading-relaxed">
+					An experimental studio exploring autonomous, AI-driven business systems.
+				</p>
+			</div>
+
+			<div>
+				<h4 class="text-sm font-medium mb-4 font-mono">Navigation</h4>
+				<ul class="space-y-2 text-sm">
+					<li><a href="/" class="text-light-text-secondary dark:text-dark-text-secondary hover:text-accent-blue transition-colors">Home</a></li>
+					<li><a href="/labs" class="text-light-text-secondary dark:text-dark-text-secondary hover:text-accent-blue transition-colors">Labs</a></li>
+					<li><a href="/products" class="text-light-text-secondary dark:text-dark-text-secondary hover:text-accent-blue transition-colors">Products</a></li>
+					<li><a href="/about" class="text-light-text-secondary dark:text-dark-text-secondary hover:text-accent-blue transition-colors">About</a></li>
+					<li><a href="/contact" class="text-light-text-secondary dark:text-dark-text-secondary hover:text-accent-blue transition-colors">Contact</a></li>
+				</ul>
+			</div>
+
+			<div>
+				<h4 class="text-sm font-medium mb-4 font-mono">Connect</h4>
+				<ul class="space-y-2 text-sm">
+					<li><a href="https://x.com" target="_blank" rel="noopener noreferrer" class="text-light-text-secondary dark:text-dark-text-secondary hover:text-accent-blue transition-colors">X (Twitter)</a></li>
+					<li><a href="https://github.com" target="_blank" rel="noopener noreferrer" class="text-light-text-secondary dark:text-dark-text-secondary hover:text-accent-blue transition-colors">GitHub</a></li>
+					<li><a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="text-light-text-secondary dark:text-dark-text-secondary hover:text-accent-blue transition-colors">YouTube</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="pt-8 border-t border-light-border dark:border-dark-border">
+			<p class="text-sm text-light-text-secondary dark:text-dark-text-secondary leading-relaxed mb-4">
+				Fully Automated Enterprises is an independent research and experimentation studio.
+				No consulting, implementation, or client services are offered through this site.
+			</p>
+			<p class="text-xs text-light-text-secondary dark:text-dark-text-secondary">
+				&copy; {currentYear} Fully Automated Enterprises. All rights reserved.
+			</p>
+		</div>
+	</div>
+</footer>

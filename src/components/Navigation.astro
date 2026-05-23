@@ -1,0 +1,125 @@
+---
+const currentPath = Astro.url.pathname;
+---
+
+<nav class="border-b border-light-border dark:border-dark-border">
+	<div class="max-w-content mx-auto px-6 py-6">
+		<div class="flex items-center justify-between">
+			<a href="/" class="text-xl font-medium hover:text-accent-blue transition-colors">
+				FAE
+			</a>
+
+			<div class="flex items-center gap-8">
+				<div class="hidden md:flex items-center gap-6">
+					<a
+						href="/"
+						class={`text-sm hover:text-accent-blue transition-colors ${currentPath === '/' ? 'text-accent-blue' : ''}`}
+					>
+						Home
+					</a>
+					<a
+						href="/labs"
+						class={`text-sm hover:text-accent-blue transition-colors ${currentPath.startsWith('/labs') ? 'text-accent-blue' : ''}`}
+					>
+						Labs
+					</a>
+					<a
+						href="/products"
+						class={`text-sm hover:text-accent-blue transition-colors ${currentPath === '/products' ? 'text-accent-blue' : ''}`}
+					>
+						Products
+					</a>
+					<a
+						href="/about"
+						class={`text-sm hover:text-accent-blue transition-colors ${currentPath === '/about' ? 'text-accent-blue' : ''}`}
+					>
+						About
+					</a>
+					<a
+						href="/contact"
+						class={`text-sm hover:text-accent-blue transition-colors ${currentPath === '/contact' ? 'text-accent-blue' : ''}`}
+					>
+						Contact
+					</a>
+				</div>
+
+				<button
+					id="theme-toggle"
+					type="button"
+					class="p-2 rounded hover:bg-light-surface dark:hover:bg-dark-surface transition-colors"
+					aria-label="Toggle theme"
+				>
+					<svg class="w-5 h-5 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+					</svg>
+					<svg class="w-5 h-5 block dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+					</svg>
+				</button>
+
+				<button
+					id="mobile-menu-toggle"
+					type="button"
+					class="md:hidden p-2 rounded hover:bg-light-surface dark:hover:bg-dark-surface transition-colors"
+					aria-label="Toggle menu"
+				>
+					<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+					</svg>
+				</button>
+			</div>
+		</div>
+
+		<div id="mobile-menu" class="hidden md:hidden mt-6 space-y-4 pb-4">
+			<a
+				href="/"
+				class={`block text-sm hover:text-accent-blue transition-colors ${currentPath === '/' ? 'text-accent-blue' : ''}`}
+			>
+				Home
+			</a>
+			<a
+				href="/labs"
+				class={`block text-sm hover:text-accent-blue transition-colors ${currentPath.startsWith('/labs') ? 'text-accent-blue' : ''}`}
+			>
+				Labs
+			</a>
+			<a
+				href="/products"
+				class={`block text-sm hover:text-accent-blue transition-colors ${currentPath === '/products' ? 'text-accent-blue' : ''}`}
+			>
+				Products
+			</a>
+			<a
+				href="/about"
+				class={`block text-sm hover:text-accent-blue transition-colors ${currentPath === '/about' ? 'text-accent-blue' : ''}`}
+			>
+				About
+			</a>
+			<a
+				href="/contact"
+				class={`block text-sm hover:text-accent-blue transition-colors ${currentPath === '/contact' ? 'text-accent-blue' : ''}`}
+			>
+				Contact
+			</a>
+		</div>
+	</div>
+</nav>
+
+<script>
+	const initMobileMenu = () => {
+		const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+		const mobileMenu = document.getElementById('mobile-menu');
+
+		if (!mobileMenuToggle || !mobileMenu) return;
+
+		mobileMenuToggle.addEventListener('click', () => {
+			mobileMenu.classList.toggle('hidden');
+		});
+	};
+
+	if (document.readyState === 'loading') {
+		document.addEventListener('DOMContentLoaded', initMobileMenu);
+	} else {
+		initMobileMenu();
+	}
+</script>

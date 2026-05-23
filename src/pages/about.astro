@@ -1,0 +1,70 @@
+---
+import { getEntry } from 'astro:content';
+import Layout from '../layouts/Layout.astro';
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+import Container from '../components/Container.astro';
+
+const aboutPage = await getEntry('pages', 'about');
+const { Content } = await aboutPage.render();
+---
+
+<Layout
+	title="About - Fully Automated Enterprises"
+	description={aboutPage.data.description}
+>
+	<Navigation />
+
+	<main>
+		<article class="py-16 md:py-24">
+			<Container>
+				<div class="max-w-3xl mx-auto">
+					<h1 class="text-3xl md:text-4xl font-medium mb-8">
+						{aboutPage.data.title}
+					</h1>
+
+					<div class="prose prose-lg dark:prose-invert max-w-none about-content">
+						<Content />
+					</div>
+				</div>
+			</Container>
+		</article>
+	</main>
+
+	<Footer />
+</Layout>
+
+<style>
+	.about-content :global(h2) {
+		@apply text-2xl font-medium mt-12 mb-4;
+	}
+
+	.about-content :global(h3) {
+		@apply text-xl font-medium mt-8 mb-3;
+	}
+
+	.about-content :global(p) {
+		@apply text-base leading-relaxed mb-6 text-light-text-secondary dark:text-dark-text-secondary;
+	}
+
+	.about-content :global(ul),
+	.about-content :global(ol) {
+		@apply mb-6 ml-6;
+	}
+
+	.about-content :global(li) {
+		@apply mb-3 text-light-text-secondary dark:text-dark-text-secondary;
+	}
+
+	.about-content :global(strong) {
+		@apply font-medium text-light-text-primary dark:text-dark-text-primary;
+	}
+
+	.about-content :global(em) {
+		@apply italic;
+	}
+
+	.about-content :global(a) {
+		@apply text-accent-blue hover:underline;
+	}
+</style>

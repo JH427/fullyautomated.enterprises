@@ -1,0 +1,39 @@
+# OS / editor junk
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# dependencies
+node_modules/
+
+# Astro / build output
+dist/
+.astro/
+
+# environment variables / secrets
+.env
+.env.*
+!.env.example
+
+# logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# temporary / cache
+tmp/
+temp/
+.cache/
+coverage/
+.eslintcache
+.parcel-cache/
+
+# hosted-editor / generator metadata copied from prototypes
+.bolt/
+.codesandbox/

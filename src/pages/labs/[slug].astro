@@ -1,0 +1,123 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import Navigation from '../../components/Navigation.astro';
+import Footer from '../../components/Footer.astro';
+import Container from '../../components/Container.astro';
+
+export async function getStaticPaths() {
+	const labs = await getCollection('labs');
+	return labs.map((lab) => ({
+		params: { slug: lab.slug },
+		props: { lab },
+	}));
+}
+
+const { lab } = Astro.props;
+const { Content } = await lab.render();
+
+const statusColors = {
+	Active: 'bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-400',
+	Archived: 'bg-gray-100 text-gray-800 dark:bg-gray-800/30 dark:text-gray-400',
+	Productized: 'bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-400',
+};
+---
+
+<Layout
+	title={`${lab.data.title} - FAE Labs`}
+	description={lab.data.summary}
+>
+	<Navigation />
+
+	<main>
+		<article class="py-16 md:py-24">
+			<Container>
+				<div class="max-w-3xl mx-auto">
+					<div class="mb-8">
+						<a
+							href="/labs"
+							class="inline-flex items-center text-sm text-accent-blue hover:underline mb-6"
+						>
+							<svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+							</svg>
+							Back to Labs
+						</a>
+
+						<div class="flex items-center gap-3 mb-4">
+							<span class={`text-xs px-2 py-1 rounded font-mono ${statusColors[lab.data.status]}`}>
+								{lab.data.status}
+							</span>
+							<span class="text-sm font-mono text-light-text-secondary dark:text-dark-text-secondary">
+								{lab.data.date}
+							</span>
+						</div>
+
+						<h1 class="text-3xl md:text-4xl font-medium mb-4">
+							{lab.data.title}
+						</h1>
+
+						<p class="text-lg text-light-text-secondary dark:text-dark-text-secondary leading-relaxed mb-6">
+							{lab.data.summary}
+						</p>
+
+						<div class="flex flex-wrap gap-2">
+							{lab.data.tags.map((tag) => (
+								<span class="text-xs px-2 py-1 rounded bg-light-surface dark:bg-dark-surface border border-light-border dark:border-dark-border font-mono">
+									{tag}
+								</span>
+							))}
+						</div>
+					</div>
+
+					<div class="border-t border-light-border dark:border-dark-border pt-8">
+						<div class="prose prose-lg dark:prose-invert max-w-none lab-content">
+							<Content />
+						</div>
+					</div>
+				</div>
+			</Container>
+		</article>
+	</main>
+
+	<Footer />
+</Layout>
+
+<style>
+	.lab-content :global(h2) {
+		@apply text-2xl font-medium mt-12 mb-4 font-mono text-sm uppercase tracking-wide text-light-text-secondary dark:text-dark-text-secondary;
+	}
+
+	.lab-content :global(h3) {
+		@apply text-lg font-medium mt-8 mb-3 font-mono text-sm text-light-text-primary dark:text-dark-text-primary;
+	}
+
+	.lab-content :global(p) {
+		@apply text-base leading-relaxed mb-4 text-light-text-secondary dark:text-dark-text-secondary;
+	}
+
+	.lab-content :global(ul),
+	.lab-content :global(ol) {
+		@apply mb-4 ml-6;
+	}
+
+	.lab-content :global(li) {
+		@apply mb-2 text-light-text-secondary dark:text-dark-text-secondary;
+	}
+
+	.lab-content :global(strong) {
+		@apply font-medium text-light-text-primary dark:text-dark-text-primary;
+	}
+
+	.lab-content :global(code) {
+		@apply font-mono text-sm bg-light-surface dark:bg-dark-surface px-1 py-0.5 rounded;
+	}
+
+	.lab-content :global(pre) {
+		@apply bg-light-surface dark:bg-dark-surface p-4 rounded-lg overflow-x-auto mb-4;
+	}
+
+	.lab-content :global(blockquote) {
+		@apply border-l-4 border-accent-blue pl-4 italic my-4;
+	}
+</style>
