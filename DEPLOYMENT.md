@@ -2,7 +2,7 @@
 
 This guide covers the deployment posture for the Fully Automated Enterprises website on Namecheap shared hosting.
 
-Current status: deployment automation is not configured yet. GitHub is the planned source of truth; Namecheap is the host target.
+Current status: deployment automation is not configured yet. GitHub is the source of truth; GitHub Actions build checks are configured; Namecheap is the host target.
 
 ## Build locally
 
@@ -11,7 +11,7 @@ npm ci
 npm run build
 ```
 
-This creates a `dist/` directory containing the static site.
+This creates a `dist/` directory containing the static site. GitHub Actions runs the same install/build check on pushes and pull requests to `main`.
 
 Expected build output includes:
 

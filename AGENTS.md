@@ -35,7 +35,7 @@ Higher-risk surfaces requiring explicit Joshua approval:
 
 ## Required checks
 
-Before committing or deploying content changes:
+GitHub Actions runs `npm ci` and `npm run build` on pushes and pull requests to `main`. Before committing or deploying content changes locally:
 
 ```bash
 npm ci
