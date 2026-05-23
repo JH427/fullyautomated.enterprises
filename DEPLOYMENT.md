@@ -26,6 +26,8 @@ Expected build output includes:
 
 ## Preferred deployment path: SSH/SFTP/rsync
 
+Detailed runbook: `docs/deployment-namecheap.md`.
+
 Joshua confirmed Namecheap cPanel exposes an SSH Keys page with both "Generate a New Key" and "Import Key" options.
 
 Preferred security posture:
@@ -62,6 +64,8 @@ Check at least:
 - `https://fullyautomated.enterprises/robots.txt`
 
 ## Open questions before automation
+
+A dedicated local deploy key now exists on Titan at `~/.ssh/fae_namecheap_deploy_ed25519`; import only `~/.ssh/fae_namecheap_deploy_ed25519.pub` into cPanel. Remaining dashboard details:
 
 - Namecheap SSH hostname
 - cPanel username

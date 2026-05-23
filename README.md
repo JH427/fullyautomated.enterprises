@@ -59,7 +59,7 @@ Hosting target: Namecheap shared hosting for `https://fullyautomated.enterprises
 
 Deployment is not automated yet. The planned path is SSH/SFTP/rsync after verifying Namecheap cPanel SSH access, hostname, username, port, and document root. Do not commit hosting credentials or private keys.
 
-See `DEPLOYMENT.md` for the current manual runbook and open questions.
+See `DEPLOYMENT.md` and `docs/deployment-namecheap.md` for the current manual runbook and open questions.
 
 ## Agent workflow
 
