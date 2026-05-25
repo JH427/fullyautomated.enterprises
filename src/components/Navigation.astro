@@ -30,6 +30,12 @@ const currentPath = Astro.url.pathname;
 						Products
 					</a>
 					<a
+						href="/methodology"
+						class={`text-sm hover:text-accent-blue transition-colors ${currentPath === '/methodology' ? 'text-accent-blue' : ''}`}
+					>
+						Methodology
+					</a>
+					<a
 						href="/about"
 						class={`text-sm hover:text-accent-blue transition-colors ${currentPath === '/about' ? 'text-accent-blue' : ''}`}
 					>
@@ -88,6 +94,12 @@ const currentPath = Astro.url.pathname;
 				class={`block text-sm hover:text-accent-blue transition-colors ${currentPath === '/products' ? 'text-accent-blue' : ''}`}
 			>
 				Products
+			</a>
+			<a
+				href="/methodology"
+				class={`block text-sm hover:text-accent-blue transition-colors ${currentPath === '/methodology' ? 'text-accent-blue' : ''}`}
+			>
+				Methodology
 			</a>
 			<a
 				href="/about"

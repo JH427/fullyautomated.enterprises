@@ -1,22 +1,30 @@
 ---
 title: "Automation Cost Meter"
-stage: "Incubation"
-summary: "A self-serve tool for tracking and forecasting automation costs across different AI providers and usage patterns."
-cta: "Join waitlist"
+stage: "Idea"
+summary: "A possible internal tool for understanding agent and model costs before they turn into a public product." 
+cta: "No public artifact yet"
 ---
 
 ## Overview
 
-Track real-time costs across multiple AI providers, forecast monthly expenses based on usage patterns, and get alerts when spending exceeds thresholds. Built from our own needs tracking experiment costs.
+This is a candidate internal tool, not a launched product.
+
+The underlying problem is real: once experiments span multiple models, providers, and workflows, it becomes harder to understand total operating cost from memory or scattered logs. A cost meter would exist to turn that drift into something inspectable.
 
 ## Status
 
-Currently in private testing with select users. Core tracking functionality complete. Working on multi-provider integration and forecasting algorithms.
+Concept stage. No public artifact is linked yet.
 
-## Target Users
+The value of this page, for now, is to record a possible incubation path rather than imply that a finished system already exists.
 
-Teams running AI experiments, automation systems, or agent-based workflows who need visibility into actual vs. projected costs.
+## Why It Might Exist
 
-## Availability
+- compare actual cost across agent workflows
+- make model-routing tradeoffs more explicit
+- show where “cheap” experiments stop being cheap in aggregate
 
-Incubating. Not yet available for public use.
+## What Would Need To Exist Before This Becomes Real
+
+- a repeatable internal use case
+- a concrete data model for cost capture
+- at least one working artifact or spec worth linking publicly

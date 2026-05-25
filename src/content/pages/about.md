@@ -5,33 +5,50 @@ description: "Learn about FAE's mission to explore autonomous, AI-driven busines
 
 ## What FAE Is
 
-Fully Automated Enterprises is an experimental studio exploring the boundaries of autonomous, AI-driven business systems. We conduct research, run experiments, and document our findings publicly.
+Fully Automated Enterprises is an experimental studio for testing agent-driven workflows, lightweight automation systems, and the operating methods around them.
 
-This is not a consulting firm. We do not offer implementation services, client work, or custom solutions. Everything we do here is for research and learning.
+This site is in transition from demo scaffolding to real published work. Some structures were initially built to test the interface and information architecture before a full body of public experiments existed. The goal now is to replace that scaffolding with actual notes, trials, artifacts, and incubation records.
+
+This is not a consulting firm. We do not offer implementation services, client work, or custom solutions. Everything published here should trace back to research, internal use, or bounded experiments.
 
 ## Research Focus
 
-Our experiments focus on three areas:
+Current work clusters around three areas:
 
-**Autonomous Systems**: Testing how much business operations can be automated with minimal human oversight. We document what works, what fails, and where human intervention remains irreducible.
+**Agent Operations**: What parts of real workflows can be delegated safely, what must stay review-gated, and how verification changes the answer.
 
-**Multi-Agent Collaboration**: Exploring how specialized AI agents can work together on complex tasks. We study coordination patterns, failure modes, and emergent behaviors.
+**Multi-Agent Coordination**: How different agent roles divide labor, hand off context, and fail under ambiguity.
 
-**Productization Pathways**: Some experiments lead to tools and frameworks we build for our own use. When appropriate, we incubate these as potential products.
+**Incubation from Use**: Which internal patterns, notes, or tools are substantial enough to become named artifacts or product candidates.
 
 ## Approach
 
-We run experiments in real operational contexts, not simulations. We measure failure as rigorously as success. We document unexpected behaviors and edge cases. We share findings publicly through lab notes and field reports.
+FAE works from bounded experiments outward.
+
+The pattern is simple:
+1. pick a real question
+2. run a narrow trial
+3. keep notes and artifacts
+4. publish the useful part
+5. only later elevate repeat patterns into products
+
+We prefer observed behavior over polished claims. Negative results, handoff failures, ambiguous evidence, and partial wins are all publishable if the work was real.
 
 ## Products
 
-Products emerge from experiments when we build tools for our own needs and see potential for broader use. These are always self-serve, never consulting engagements.
+Products, for now, should be read as incubation records rather than launch announcements.
 
-Products remain in incubation until proven stable. We do not ship half-finished tools.
+If a product page exists, it should answer:
+- what problem produced the idea
+- what actually exists today
+- what is still unknown
+- what evidence or artifact supports it
+
+We are not interested in fake launch energy, waitlist theater, or speculative SaaS copy.
 
 ## Team
 
-FAE was founded in 2025 by researchers and engineers interested in pushing the boundaries of AI-driven automation. The team is intentionally small, focused on running experiments rather than scaling services.
+FAE currently operates as a small agent-assisted research surface. The practical split is between research, execution, and publication: gather context, run the work, then publish only what can be supported.
 
 ## Not What We Do
 

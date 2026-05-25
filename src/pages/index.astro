@@ -29,7 +29,11 @@ const allProducts = await getCollection('products');
 						Fully Automated Enterprises
 					</h1>
 					<p class="text-xl text-light-text-secondary dark:text-dark-text-secondary leading-relaxed">
-						An experimental studio exploring autonomous, AI-driven business systems.
+						An experimental studio for agent workflows, automation methods, and publishable operating notes.
+					</p>
+					<p class="mt-4 text-sm text-light-text-secondary dark:text-dark-text-secondary">
+						<a href="/methodology" class="text-accent-blue hover:underline">Read the methodology</a>
+						to see how experiments are chosen, what counts as evidence, and what becomes public.
 					</p>
 				</div>
 			</Container>
@@ -41,19 +45,19 @@ const allProducts = await getCollection('products');
 					<div>
 						<h2 class="text-lg font-medium mb-3">Research</h2>
 						<p class="text-sm text-light-text-secondary dark:text-dark-text-secondary leading-relaxed">
-							We run experiments in real operational contexts, testing the boundaries of AI-driven automation. Every experiment is documented with full transparency.
+							We use bounded experiments to learn what agent-driven systems can actually do, where they fail, and what is safe to publish.
 						</p>
 					</div>
 					<div>
 						<h2 class="text-lg font-medium mb-3">Experiments</h2>
 						<p class="text-sm text-light-text-secondary dark:text-dark-text-secondary leading-relaxed">
-							Our lab notes document what works, what fails, and unexpected behaviors. We measure failure as rigorously as success.
+							Lab entries are meant to become records of real trials, failures, and partial wins rather than polished case studies.
 						</p>
 					</div>
 					<div>
 						<h2 class="text-lg font-medium mb-3">Products</h2>
 						<p class="text-sm text-light-text-secondary dark:text-dark-text-secondary leading-relaxed">
-							When experiments yield useful tools, we incubate them as self-serve products. No consulting, no custom implementations.
+							When patterns harden into tools or reusable structures, we track them here as incubation records. No consulting, no custom implementations.
 						</p>
 					</div>
 				</div>
@@ -63,7 +67,7 @@ const allProducts = await getCollection('products');
 		<section class="py-16 border-t border-light-border dark:border-dark-border">
 			<Container>
 				<div class="flex items-center justify-between mb-8">
-					<h2 class="text-2xl font-medium">Featured Experiments</h2>
+					<h2 class="text-2xl font-medium">Recent Experiments</h2>
 					<a href="/labs" class="text-sm text-accent-blue hover:underline">
 						View all →
 					</a>
@@ -88,7 +92,7 @@ const allProducts = await getCollection('products');
 				<div class="mb-8">
 					<h2 class="text-2xl font-medium mb-2">Product Incubation</h2>
 					<p class="text-sm text-light-text-secondary dark:text-dark-text-secondary">
-						Tools emerging from our experiments, currently in development
+						Named tool or pattern candidates emerging from internal work
 					</p>
 				</div>
 				<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -110,18 +114,7 @@ const allProducts = await getCollection('products');
 					<h2 class="text-2xl font-medium mb-6">Connect</h2>
 					<div class="flex flex-wrap gap-6">
 						<a
-							href="https://x.com"
-							target="_blank"
-							rel="noopener noreferrer"
-							class="flex items-center gap-2 text-sm text-accent-blue hover:underline"
-						>
-							<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-								<path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path>
-							</svg>
-							X (Twitter)
-						</a>
-						<a
-							href="https://github.com"
+							href="https://github.com/JH427"
 							target="_blank"
 							rel="noopener noreferrer"
 							class="flex items-center gap-2 text-sm text-accent-blue hover:underline"
@@ -132,15 +125,13 @@ const allProducts = await getCollection('products');
 							GitHub
 						</a>
 						<a
-							href="https://youtube.com"
-							target="_blank"
-							rel="noopener noreferrer"
+							href="mailto:contact@fullyautomated.enterprises"
 							class="flex items-center gap-2 text-sm text-accent-blue hover:underline"
 						>
 							<svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-								<path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"></path>
+								<path d="M1.5 5.25A2.25 2.25 0 0 1 3.75 3h16.5a2.25 2.25 0 0 1 2.25 2.25v13.5A2.25 2.25 0 0 1 20.25 21H3.75A2.25 2.25 0 0 1 1.5 18.75V5.25Zm2.07-.75 8.43 6.321 8.43-6.321H3.57Zm17.43 1.86-8.55 6.412a.75.75 0 0 1-.9 0L3 6.36v12.39c0 .414.336.75.75.75h16.5a.75.75 0 0 0 .75-.75V6.36Z"></path>
 							</svg>
-							YouTube
+							Email
 						</a>
 					</div>
 				</div>

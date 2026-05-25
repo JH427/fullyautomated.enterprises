@@ -31,11 +31,11 @@ const stageColors = {
 				<div class="max-w-3xl mb-12">
 					<h1 class="text-3xl md:text-4xl font-medium mb-4">Products</h1>
 					<p class="text-lg text-light-text-secondary dark:text-dark-text-secondary leading-relaxed mb-6">
-						Tools emerging from our experiments. These are self-serve products built for our own needs, made available when they reach sufficient maturity.
+						Candidate tools and named patterns emerging from internal work. This page is an incubation ledger, not a product launch surface.
 					</p>
 					<div class="p-4 bg-light-surface dark:bg-dark-surface border border-light-border dark:border-dark-border rounded-lg">
 						<p class="text-sm text-light-text-secondary dark:text-dark-text-secondary">
-							All products are incubating. We do not offer consulting, implementation services, or custom development.
+							Some entries are still concept-stage placeholders. Public artifacts should be added before anything here is treated as a real product.
 						</p>
 					</div>
 				</div>
@@ -65,12 +65,9 @@ const stageColors = {
 									<Content />
 								</div>
 
-								<button
-									disabled
-									class="text-sm px-4 py-2 rounded border border-light-border dark:border-dark-border text-light-text-secondary dark:text-dark-text-secondary cursor-not-allowed opacity-60"
-								>
+								<p class="text-xs font-mono text-light-text-secondary dark:text-dark-text-secondary border-t border-light-border dark:border-dark-border pt-4">
 									{product.data.cta}
-								</button>
+								</p>
 							</article>
 						);
 					})}
