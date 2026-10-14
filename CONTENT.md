@@ -1,264 +1,46 @@
-# Adding Content to FAE Website
+# Studio content guide
 
-This guide explains how to add new experiments, products, and pages to the website.
+## Work, not a speculative product catalog
 
-## Adding New Lab Experiments
+Edit selected projects in `src/data/work.ts`; the homepage and `/work` share the same component. Each public-source entry needs a real repository link and a plain account of what is implemented. Local work needs an explicit local/private label, a limit statement, and no misleading download or source link. `/products` is a compatibility explanation pointing to `/work`, not a place to incubate invented offerings.
 
-### 1. Create a New Markdown File
+Verify source visibility separately from local implementation. A public repository does not mean a product is released, hosted, supported, or reliable. Do not publish private repository URLs, local paths, endpoints, prompts, logs, personal data, or secrets.
 
-Create a new file in `src/content/labs/` with a descriptive filename (e.g., `my-experiment.md`).
+## Lab notes
 
-The filename becomes the URL slug automatically. For example:
-- `my-experiment.md` → `/labs/my-experiment`
-- `llm-orchestration.md` → `/labs/llm-orchestration`
+Markdown under `src/content/labs/` retains the original `/labs/<filename>` addresses. Required frontmatter:
 
-### 2. Add Frontmatter
-
-At the top of the file, add the required metadata:
-
-```markdown
----
-title: "Experiment 004: My Experiment Title"
-status: "Active"
-date: "2026-01-20"
-summary: "A brief one-sentence description of the experiment."
-tags: ["tag1", "tag2", "tag3"]
----
+```yaml
+title: "A specific record"
+status: "Archived" # Existing schema also accepts Active | Productized; require evidence before using them.
+kind: "historical" # historical | correction (default historical)
+date: "2026-05-25" # Original record date, not a claim of recent activity.
+summary: "One sentence that preserves the evidence limit."
+tags: ["historical", "agents"]
 ```
 
-**Status Options:**
-- `Active` - Currently running
-- `Archived` - Completed or discontinued
-- `Productized` - Led to a product
+The current notebook groups historical records and corrections without a client-side filter. New live experiments would need a deliberate schema/presentation change; do not label current work historical just to fit the current view. Rick/Greg records are retired historical context, not the current team or Active work.
 
-### 3. Write the Content
+Unsupported demos retain explanatory correction pages. Never restore their illustrative output counts, quality percentages, or operational anecdotes as results. Exact originals are in `archive/legacy-content/`, outside Astro’s public/content trees. That archive is excluded from website output, but is not confidential if the source repository is shared.
 
-After the frontmatter, write your experiment notes using these standard sections:
+## About and Method
 
-```markdown
-## Objective
+Edit `src/content/pages/about.md` and `methodology.md`. Use h2 sections; the template supplies the single h1. Keep the method small: artifacts, bounded claims, failures, and separate human publication decisions. Avoid self-referential operating bureaucracy.
 
-What you're trying to test or accomplish.
+## Images and claims
 
-## System Configuration (Sanitized)
+Use permitted real screenshots scrubbed of private details, or clearly identified original artwork. Never fabricate a terminal session, measurement, dashboard, or film and present it as a project output. The current project studies are visual identities, explicitly not screenshots. The share PNG is an intentional source asset; build outputs and review screenshots stay ignored or outside the repository.
 
-High-level architecture without exposing sensitive details:
-- Component 1
-- Component 2
-- Component 3
+For a result claim, retain the exact task, configuration, observation, and evidence link. A plan is not implementation; implementation is not a benchmark; a passing build is not permission to publish.
 
-## Output Summary
+## Required local checks
 
-Key metrics and results.
-
-## Observations
-
-### What Worked
-
-Things that performed well or exceeded expectations.
-
-### What Failed
-
-Things that didn't work as planned.
-
-### Unexpected Behavior
-
-Surprising or unanticipated results.
-
-## Human Intervention Required
-
-- List of manual steps needed
-- Time spent on oversight
-- Critical decision points
-
-## Next Iteration
-
-Plans for future experiments or improvements.
-```
-
-### 4. Build and Deploy
-
-```bash
+```sh
+npm ci
 npm run build
+node --test tests/site.test.mjs
+node tests/browser-smoke.mjs
+npm run preview -- --host 127.0.0.1
 ```
 
-The new experiment will automatically appear in:
-- The Labs index page (`/labs`)
-- Tag filtering system
-- Home page (if it's one of the 3 most recent)
-
-## Adding New Products
-
-### 1. Create a New Markdown File
-
-Create a file in `src/content/products/` (e.g., `my-product.md`).
-
-### 2. Add Frontmatter
-
-```markdown
----
-title: "Product Name"
-stage: "Incubation"
-summary: "Brief description of the product."
-cta: "Join waitlist"
----
-```
-
-**Stage Options:**
-- `Idea` - Early concept
-- `Incubation` - In development
-- `Beta` - Testing phase
-- `Live` - Publicly available
-
-### 3. Write Product Details
-
-```markdown
-## Overview
-
-Detailed description of what the product does.
-
-## Status
-
-Current development status and progress.
-
-## Target Users
-
-Who this product is for.
-
-## Availability
-
-When/how users can access it.
-```
-
-### 4. Build and Deploy
-
-```bash
-npm run build
-```
-
-The product will appear on the `/products` page.
-
-## Updating the About Page
-
-Edit `src/content/pages/about.md`:
-
-```markdown
----
-title: "About Fully Automated Enterprises"
-description: "Learn about FAE's mission..."
----
-
-Your content here in Markdown format.
-```
-
-## Content Guidelines
-
-### Writing Style
-
-- **Technical but accessible** - Assume intelligent readers, but explain jargon
-- **Honest about failures** - Document what didn't work
-- **Specific over vague** - Use concrete examples and metrics
-- **No marketing speak** - This is a research lab, not a product pitch
-
-### What to Include
-
-✅ Real experiments with actual results
-✅ Specific observations and metrics
-✅ Failures and limitations
-✅ Time spent on human oversight
-✅ Unexpected behaviors
-
-### What to Avoid
-
-❌ Marketing language or hype
-❌ Vague descriptions without data
-❌ Hiding failures or limitations
-❌ Exposing API keys or sensitive configs
-❌ Making promises about timelines
-
-## File Organization
-
-```
-src/content/
-├── labs/           # Experiment notes
-│   ├── experiment-001.md
-│   ├── experiment-002.md
-│   └── ...
-├── products/       # Product pages
-│   ├── product-001.md
-│   └── ...
-└── pages/          # Static pages
-    └── about.md
-```
-
-## Markdown Features
-
-### Headings
-
-```markdown
-# H1 - Page title (automatic from frontmatter)
-## H2 - Main sections
-### H3 - Subsections
-```
-
-### Lists
-
-```markdown
-- Bullet point
-- Another point
-
-1. Numbered item
-2. Another item
-```
-
-### Bold and Italic
-
-```markdown
-**bold text**
-*italic text*
-```
-
-### Code
-
-Inline code: \`variable\`
-
-Code blocks:
-\`\`\`javascript
-const example = true;
-\`\`\`
-
-### Links
-
-```markdown
-[Link text](https://example.com)
-```
-
-### Blockquotes
-
-```markdown
-> This is a quote or callout
-```
-
-## Testing Locally
-
-Before deploying, test your changes:
-
-```bash
-npm run dev
-```
-
-Visit `http://localhost:4321` to preview the site.
-
-## Deployment Workflow
-
-1. Add or edit content in `src/content/`
-2. Test locally with `npm run dev`
-3. Build with `npm run build`
-4. Upload `dist/` folder to hosting
-5. Clear browser cache to see changes
-
-## Need Help?
-
-- Check existing lab files for examples
-- Markdown syntax: https://www.markdownguide.org/basic-syntax/
-- Astro content collections: https://docs.astro.build/en/guides/content-collections/
+Inspect affected pages visually at mobile and desktop widths. Keep new behavior in vertical test-first slices: fail an assertion against the existing built site, implement, rebuild, pass, then move to the next behavior. Deployment requires separate authorization.

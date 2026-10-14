@@ -1,0 +1,13 @@
+---
+import { work } from '../data/work';
+const { detailed = false } = Astro.props;
+---
+<div class="work-list">
+{work.map(item => <article class="work-row" id={item.id}>
+  <div class="work-index">{item.number} / {item.lane}</div>
+  <div class="work-body"><span class="maturity">{item.stage}</span><h3>{item.title}</h3><p>{item.description}</p>{detailed && <p class="limitation">{item.limit}</p>}
+  <div class="work-links">{item.evidence ? <a href={item.evidence}>{item.link} ↗</a> : <span class="small-note">Local work · public artifact not available</span>}{!detailed && <a href={`/work#${item.id}`}>Project notes <span aria-hidden="true">↗</span></a>}</div></div>
+  <div class={`specimen ${item.image}`} aria-hidden="true">{item.image === 'horizon' ? <><span>INSPECT / EDIT / VERIFY</span><div class="code-bars"><i/><i/><i/><i/></div><strong>H_</strong><span>LOCAL-FIRST CODING HARNESS</span></> : item.image === 'sloperator' ? <><span>PICTURE / SOUND / ASSEMBLY</span><div class="timeline"><i/><i/><i/><i/><i/></div><strong>S—O</strong><span>THE TIMELINE IS THE CONTRACT</span></> : <><span>PROGRAM / JUDGE / COMPARE</span><div class="bench-grid">{Array.from({length:18}, (_,i)=><i style={`opacity:${.2 + (i%5)*.15}`}/>)}</div><span>ONE PROBLEM AT A TIME</span></>}</div>
+</article>)}
+</div>
+<p class="artifact-caption">Graphic studies by the studio. These are visual identities, not software screenshots or measured results.</p>

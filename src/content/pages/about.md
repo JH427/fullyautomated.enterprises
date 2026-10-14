@@ -1,57 +1,24 @@
 ---
-title: "About Fully Automated Enterprises"
-description: "Learn about FAE's mission to explore autonomous, AI-driven business systems through research and experimentation."
+title: "An independent workshop."
+description: "Joshua’s studio for local AI, useful tools, and machine-made media."
 ---
 
-## What FAE Is
+Fully Automated Enterprises is Joshua’s independent studio for local AI, useful tools, and machine-made media. The work moves between software engineering and creative production: coding harnesses, small evaluation tools, research workflows, and systems for assembling sound and picture.
 
-Fully Automated Enterprises is an experimental studio for testing agent-driven workflows, lightweight automation systems, and the operating methods around them.
+## Close to the material
 
-This site is in transition from demo scaffolding to real published work. Some structures were initially built to test the interface and information architecture before a full body of public experiments existed. The goal now is to replace that scaffolding with actual notes, trials, artifacts, and incubation records.
+Running a model is only the beginning. The interesting work is in the surrounding instrument: its tools, interface, failure modes, resource limits, and the artifacts it leaves behind.
 
-This is not a consulting firm. We do not offer implementation services, client work, or custom solutions. Everything published here should trace back to research, internal use, or bounded experiments.
+That is why the studio works across disciplines. A coding harness and a media timeline both need explicit inputs, inspectable decisions, and a way to tell whether the output is usable.
 
-## Research Focus
+## Human-directed, machine-assisted
 
-Current work clusters around three areas:
+The name is an ambition, not a description of an unattended company. Agents help with research, implementation, and creative experiments. People still choose the direction, judge the work, and decide what becomes public.
 
-**Agent Operations**: What parts of real workflows can be delegated safely, what must stay review-gated, and how verification changes the answer.
+The [work index](/work) separates public-source software from local prototypes. The [lab notebook](/labs) preserves earlier operating notes and corrects unsupported demo copy. Neither is a catalog of finished commercial products.
 
-**Multi-Agent Coordination**: How different agent roles divide labor, hand off context, and fail under ambiguity.
+## An open notebook, with boundaries
 
-**Incubation from Use**: Which internal patterns, notes, or tools are substantial enough to become named artifacts or product candidates.
+Useful code and lessons can be public without publishing every working file. Private research notes, personal data, and operational details stay out of the site.
 
-## Approach
-
-FAE works from bounded experiments outward.
-
-The pattern is simple:
-1. pick a real question
-2. run a narrow trial
-3. keep notes and artifacts
-4. publish the useful part
-5. only later elevate repeat patterns into products
-
-We prefer observed behavior over polished claims. Negative results, handoff failures, ambiguous evidence, and partial wins are all publishable if the work was real.
-
-## Products
-
-Products, for now, should be read as incubation records rather than launch announcements.
-
-If a product page exists, it should answer:
-- what problem produced the idea
-- what actually exists today
-- what is still unknown
-- what evidence or artifact supports it
-
-We are not interested in fake launch energy, waitlist theater, or speculative SaaS copy.
-
-## Team
-
-FAE currently operates as a small agent-assisted research surface. The practical split is between research, execution, and publication: gather context, run the work, then publish only what can be supported.
-
-## Not What We Do
-
-We do not offer consulting, implementation services, or client work. We do not build custom solutions for external stakeholders. We do not provide support for integration into existing systems.
-
-This separation is intentional. It allows us to focus on experimental work without client obligations or service delivery commitments.
+This is an independent studio, not a consulting or implementation-service offering. For questions about the work, [get in touch](/contact).

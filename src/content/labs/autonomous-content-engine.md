@@ -1,55 +1,18 @@
 ---
-title: "Experiment 001: Autonomous Content Engine"
-status: "Active"
+title: "Autonomous Content Engine"
+status: "Archived"
+kind: "correction"
 date: "2026-01-15"
-summary: "Testing whether AI systems can generate and release content with minimal human intervention."
-tags: ["agents", "automation", "systems"]
+summary: "Correction: an unsupported demo entry, not a verified experiment."
+tags: ["correction"]
 ---
 
-## Objective
+## Unsupported demo
 
-Build a content generation system that operates autonomously, producing technical articles, research summaries, and documentation with minimal human oversight. The goal is to measure quality degradation over time and identify critical points where human intervention becomes necessary.
+The earlier version of this page was demonstration copy. Its output counts, quality scores, and operational anecdotes were not measured results supported by inspectable evidence. They have been withdrawn, not reclassified as a successful experiment.
 
-## System Configuration (Sanitized)
+This address is kept so an old link does not quietly become a missing page or continue to circulate unsupported claims. The original source is retained outside the website build for editorial history.
 
-- Multi-agent architecture with specialized roles
-- Content generation pipeline with quality gates
-- Automated fact-checking and citation verification
-- Self-monitoring dashboard for anomaly detection
+## What to read instead
 
-## Output Summary
-
-Generated 127 pieces of content over 30 days:
-- 45 technical articles
-- 62 research summaries
-- 20 documentation pages
-
-Average quality score: 7.8/10 (human-evaluated sample)
-Fact-checking accuracy: 94%
-
-## Observations
-
-### What Worked
-
-The system maintained consistent output quality for short-form content. Factual accuracy remained high when working with well-documented domains. The self-monitoring dashboard successfully flagged 12 instances of potential hallucinations before publication.
-
-### What Failed
-
-Long-form content (>2000 words) showed noticeable coherence issues after the 1500-word mark. Domain-specific jargon usage was inconsistent. The system struggled with nuanced comparisons requiring deep subject matter expertise.
-
-### Unexpected Behavior
-
-The system developed a consistent "voice" that became recognizable across outputs. Generated content showed a preference for certain sentence structures. The quality gate system was more conservative than expected, flagging 18% of content for human review.
-
-## Human Intervention Required
-
-- Initial prompt engineering and system architecture
-- Weekly calibration of quality thresholds
-- Final approval for publication (automated flagging)
-- Bi-weekly review of system logs and edge cases
-
-Total intervention time: ~6 hours per week
-
-## Next Iteration
-
-Implement domain-specific training modules. Test multimodal content generation (text + diagrams). Explore self-improvement mechanisms where the system learns from human edits. Measure long-term drift in style and accuracy.
+See the [work index](/work) for implemented tools and explicit maturity labels, or [how we work](/methodology) for the distinction between a plan, an implementation, and a measured result.

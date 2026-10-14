@@ -1,118 +1,26 @@
 ---
-title: "Methodology"
-description: "How Fully Automated Enterprises chooses experiments, handles evidence, and decides what becomes public."
+title: "Make it. Check it. Say what happened."
+description: "A small working method: real artifacts, bounded claims, explicit limits, and human publication decisions."
 ---
 
-## Why This Page Exists
+Start with something worth making or a question small enough to answer. Build a narrow version, inspect what it actually does, and keep the evidence close to the claim.
 
-FAE is intended to become a record of real work, not a container for plausible-sounding automation claims.
+## A plan is not a result
 
-This page describes the operating standard behind that goal: how experiments are chosen, what counts as evidence, what gets published, and where human review still matters.
+Separate intended capabilities from implemented ones. Roadmap features stay on the roadmap. A local prototype is not a public release; public source is not a supported service.
 
-## How Experiments Are Chosen
+## A repository is not a benchmark
 
-We prefer questions that are:
+Source can show how a tool is built. A test can establish a specific behavior. A performance claim needs the task, model, configuration, measurement method, and result. None of these automatically proves the others.
 
-- narrow enough to run in days, not months
-- tied to a real workflow, not a thought experiment alone
-- likely to produce an artifact, note, or reusable pattern
-- capable of failing in a visible way
-- useful even if the outcome is negative or partial
+Where a project has public source, the [work index](/work) links it directly. Where evidence is private or unavailable, we say so rather than inventing a public artifact. Small trials do not establish general reliability.
 
-Good experiment questions usually look like:
-- What can an agent do safely in a bounded maintenance lane?
-- What breaks when context is handed from one agent role to another?
-- Which parts of a workflow are expensive because of model choice rather than real difficulty?
-- When does a promising pattern harden into something worth naming or productizing?
+## Failure belongs in the record
 
-## What Counts as Evidence
+Keep constraints, manual interventions, and negative results attached to the work. If an earlier claim is unsupported, correct the original address instead of quietly leaving it in circulation. The [lab corrections](/labs) follow that rule.
 
-We do not treat confidence, polish, or fluency as evidence.
+## Publication is a separate decision
 
-For this site, evidence usually means one or more of:
+A passing build is not permission to publish. Human review determines what is appropriate to share. Secrets, private endpoints, personal information, and third-party material without permission stay out.
 
-- a repository or code artifact
-- a build log or verification result
-- a structured experiment note
-- an operating document or checklist
-- a reproducible workflow
-- a concrete failure case
-- a decision memo grounded in performed work
-
-Public writing should point back to something real whenever possible.
-
-## Publication Standard
-
-A result is publishable when:
-
-1. a real question was pursued
-2. some work was actually performed
-3. at least one observation, constraint, or failure became clearer
-4. there is enough provenance to explain why the claim exists
-
-This means negative results are valid material.
-
-A failed handoff, a brittle workflow, or a tool that looked promising but did not survive contact with real use can all be more valuable than a polished success story.
-
-## What Gets Published
-
-Typical public outputs include:
-
-- lab entries for bounded experiments
-- methodology notes
-- operating rules and checklists
-- incubation records for repeated internal patterns
-- short notes that clarify evidence, constraints, or lessons learned
-
-We publish the useful layer, not every internal detail.
-
-## What Gets Withheld or Sanitized
-
-Some things should not be published directly even when the work is real.
-
-This includes, depending on context:
-
-- secrets, tokens, internal endpoints, or access details
-- sensitive deployment specifics
-- third-party information that is not ours to disclose
-- internal notes that would create security or privacy risk
-- details that are too raw to support a clean public claim yet
-
-When material is sanitized, the goal is to preserve the lesson without exposing the wrong substrate.
-
-## Human Review
-
-Human review still matters in a few places:
-
-- public claims that imply outcomes, scale, or capability
-- subjective design direction
-- legal or biographical framing
-- deciding whether a result is genuinely supported
-- deciding whether something is publishable at all
-
-The point is not to remove humans from the loop everywhere.
-The point is to understand where autonomy holds up and where review is still the mechanism that keeps the record honest.
-
-## Productization Threshold
-
-A pattern should not become a "product" page just because it sounds useful.
-
-Before something is treated as a real incubation candidate, we want to see:
-
-- repeated internal use or repeated experimental relevance
-- a stable problem statement
-- at least one artifact or spec
-- evidence that the pattern is more than a one-off workaround
-
-Until then, it is better described as an idea, a note, or an internal pattern.
-
-## Current Operating Bias
-
-FAE currently prefers:
-
-- bounded experiments over grand programs
-- notes with provenance over polished stories
-- visible failure modes over synthetic certainty
-- small real artifacts over large speculative roadmaps
-
-That bias is deliberate. It is easier to grow a trustworthy record from small real things than to backfill truth under large invented narratives.
+Creative work follows the same standard: identify generated or illustrative material honestly. A graphic study is not a screenshot; a proposed production pipeline is not a finished film.
