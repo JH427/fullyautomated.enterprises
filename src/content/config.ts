@@ -4,7 +4,7 @@ const labs = defineCollection({
   type: 'content',
   schema: z.object({
     title: z.string(),
-    kind: z.enum(['historical', 'correction']).default('historical'),
+    kind: z.enum(['historical', 'correction', 'research']).default('historical'),
     status: z.enum(['Active', 'Archived', 'Productized']),
     date: z.string(),
     summary: z.string(),
